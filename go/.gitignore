@@ -1,0 +1,8 @@
+.idea
+.vscode
+.DS_Store
+*.swp
+*.swo
+beego.iml
+
+vendor/
