@@ -11,13 +11,13 @@ describe('combineReducers', () => {
     const finalState = {
       theDefaultReducer: 0,
       firstNamedReducer: 1,
-      secondNamedReducer: 2,
+      secondNamedReducer: 2
     };
 
     const rootReducer = combineReducers({
       theDefaultReducer,
       firstNamedReducer,
-      secondNamedReducer,
+      secondNamedReducer
     });
 
     expect(typeof rootReducer).toBe('function');
@@ -27,7 +27,7 @@ describe('combineReducers', () => {
   it('状态不变性校验', () => {
     const previousState = {
       todos: ['1'],
-      count: 0,
+      count: 0
     };
 
     const todoReducer = (state = [], action) => {
@@ -42,7 +42,7 @@ describe('combineReducers', () => {
 
     const rootReducer = combineReducers({
       todos: todoReducer,
-      count: countReducer,
+      count: countReducer
     });
 
     const nextState = rootReducer(previousState, 'add');
@@ -52,12 +52,12 @@ describe('combineReducers', () => {
 
     expect(previousState).toEqual({
       todos: ['1'],
-      count: 0,
+      count: 0
     });
 
     expect(nextState).toEqual({
       todos: ['1', '2'],
-      count: 1,
+      count: 1
     });
   });
 

@@ -9,9 +9,9 @@ function quickSort(arr) {
     return arr;
   }
 
-  let letfArr = [],
-    rightArr = [],
-    pivot = arr[0];
+  const letfArr = [];
+  const rightArr = [];
+  const pivot = arr[0];
 
   // 遍历剩余的内容，进行排序
   for (let i = 1; i < arr.length; i++) {

@@ -1,12 +1,11 @@
 /* eslint-disable no-extend-native */
-// @ts-check
 
 /**
  * Description: 增强版本的 all，支持数组与对象方式。如果传入的是数组形式的 promises，则返回结果数组；否则返回对象。
  * @param {Array|Object}promises
  * @return {Promise<any>} 新的 Promise 对象
  */
-Promise.xAll = (promises) => {
+Promise.xAll = promises => {
   // 在这里进行入参校验，如果参数非 object 则直接抛出异常
   if (typeof promises !== 'object' || promises === null) {
     throw new Error('Invalid Params');
@@ -32,12 +31,12 @@ Promise.xAll = (promises) => {
         resolveAll();
       } else {
         promise
-          .then((data) => {
+          .then(data => {
             cb(data);
 
             resolveAll();
           })
-          .catch((err) => {
+          .catch(err => {
             reject(err);
           });
       }
@@ -50,7 +49,7 @@ Promise.xAll = (promises) => {
 
       // 遍历激活所有的 Promise
       promises.forEach((promise, i) => {
-        handleProcess(promise, (data) => {
+        handleProcess(promise, data => {
           result[i] = data;
         });
       });
@@ -58,8 +57,8 @@ Promise.xAll = (promises) => {
       result = {};
       leftPromiseSize = Object.keys(promises).length;
 
-      Object.keys(promises).forEach((key) => {
-        handleProcess(promises[key], (data) => {
+      Object.keys(promises).forEach(key => {
+        handleProcess(promises[key], data => {
           result[key] = data;
         });
       });
