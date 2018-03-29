@@ -3,7 +3,7 @@
  * @param {*} arr 待排序数组
  * @returns 纯函数，排序后的数组
  */
-function quickSort(arr) {
+export function quickSort(arr) {
   // 如果数组长度小于等于 1 则返回
   if (arr.length <= 1) {
     return arr;
@@ -24,4 +24,6 @@ function quickSort(arr) {
   return [...quickSort(letfArr), pivot, ...quickSort(rightArr)];
 }
 
-console.log(quickSort([4, 5, 3, 1, 2]));
+export function mergeSort(arr) {
+  return arr;
+}

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 将数组进行扁平化处理
 func listFlatten(l []interface{}) []int {
 	var pv []int
 	for _, cv := range l {
@@ -9,6 +10,7 @@ func listFlatten(l []interface{}) []int {
 		case int:
 			pv = append(pv, t)
 		case []interface{}:
+			// 执行递归操作
 			pv = append(pv, listFlatten(t)...)
 		default:
 			panic("unexpected type")

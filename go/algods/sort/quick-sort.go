@@ -1,58 +1,47 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
-
 /** 交换数据 */
-func swap(x *int, y *int) {
-	x, y = y, x
+func swap(array []int, x, y uint) {
+	temp := array[x]
+	array[x] = array[y]
+	array[y] = temp
 }
 
-func partition(array []int, p uint, q uint, pivotLocation uint) uint {
+// 将数组根据 pivotLocation 划分为两段
+func partition(array []int, start uint, end uint, pivotLocation uint) uint {
 
+	// 首先将枢轴交换到尾部
 	pivot := array[pivotLocation]
-	swap(&array[pivotLocation], &array[q])
-	i := p
-	for j := p; j < q; j++ {
+	swap(array, pivotLocation, end)
+
+	// 将所有小于枢轴值的移动到数组前部
+	i := start
+	for j := start; j < end; j++ {
 		if array[j] <= pivot {
-			swap(&array[i], &array[j])
+			swap(array, i, j)
 			i++
 		}
 	}
-	swap(&array[q], &array[i])
+
+	// 将枢轴值交换到中间位置
+	swap(array, end, i)
+
 	return i
 }
 
-func quicksort(array []int, start uint, end uint) {
+// 快速排序
+func QuickSort(array []int, start uint, end uint) {
 	if start < end {
 		pivot := (end + start) / 2
 		r := partition(array, start, end, pivot)
 		if r > start {
-			quicksort(array, start, r-1)
+			QuickSort(array, start, r-1)
 		}
-		quicksort(array, r+1, end)
+		QuickSort(array, r+1, end)
 	}
 }
 
-/** 执行性能评测 */
 func main() {
-
-	NUM := 100000000
-	a1 := make([]int, NUM)
-
-	for i := 0; i < NUM; i++ {
-		a1[i] = rand.Int()
-	}
-
-	fmt.Printf("a1[0]: %d, a1[1]: %d, a1[2]: %d\n", a1[0], a1[1], a1[2])
-
-	// now run the test
-	t0 := time.Now()
-	quicksort(a1, 0, uint(NUM-1))
-	t1 := time.Now()
-	fmt.Printf("n of %v took %v to run.\n", len(a1), t1.Sub(t0))
-	fmt.Printf("a1[0]: %d, a1[1]: %d, a1[2]: %d\n", a1[0], a1[1], a1[2])
+	arr := []int{1, 2, 0}
+	QuickSort(arr, 0, uint(len(arr)-1))
 }
