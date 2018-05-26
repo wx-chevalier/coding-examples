@@ -1,3 +1,17 @@
+/*
+ * @file Service Worker 示例文件
+ * @description 缓存系统资源与 Fetch 请求
+ * 
+ * @author 王下邀月熊 <384924552@qq.com>
+ * 
+ * Created Date: Sun, 2018-03-25 23:00:57
+ * 
+ * Last Modified: Sat, 2018-05-26 16:55:17
+ * Last Modified By: 王下邀月熊 <384924552@qq.com>
+ * 
+ * This code is licensed under the MIT License.
+ */
+
 /*jshint esversion: 6 */
 /*jshint strict:false */
 /*global self:true */
@@ -8,9 +22,7 @@
 (function() {
   'use strict';
 
-  // borrowing heavily from adactio's sw patterns here... Thanks JK!
-
-  const version = 'fgv52::';
+  const version = 'wx::';
   const staticCacheName = version + 'static';
   const pagesCacheName = version + 'pages';
   const imagesCacheName = version + 'images';
