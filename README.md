@@ -36,10 +36,12 @@ Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Se
   * [design-pattern](./ts/design-pattern): 设计模式
   * [snippets](./ts/snippets): 常用代码片
 
-* [Go](https://github.com/wxyyxc1992/gopher-hut/tree/master/coding-snippets): 为了便于代码管理，所有 Go 的代码统一托管在 [gopher-hut](https://github.com/wxyyxc1992/gopher-hut/)
+* [Go](./go): 为了便于代码管理，所有 Go 的代码统一托管在 [gopher-hut](https://github.com/wxyyxc1992/gopher-hut/)
 
   * [algods](https://github.com/wxyyxc1992/gopher-hut/tree/master/coding-snippets/algods): 数据结构与算法
   * [design-pattern](https://github.com/wxyyxc1992/gopher-hut/tree/master/coding-snippets/design-pattern): 设计模式
   * [snippets](https://github.com/wxyyxc1992/gopher-hut/tree/master/coding-snippets/snippets): 常用代码片
 
 * [Web](./web)
+
+* [OJ](./oj): 常见的 OJ 算法题

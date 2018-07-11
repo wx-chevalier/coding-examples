@@ -1,6 +1,18 @@
-/* disable eslint */
-// http://thecodebarbarian.com/algorithm-interview-questions-in-js-glob-matching.html
+/*
+ * @file 文件描述
+ * @description http://thecodebarbarian.com/algorithm-interview-questions-in-js-glob-matching.html
+ * 
+ * @author 王下邀月熊 <384924552@qq.com>
+ * 
+ * Created Date: Sun, 2018-03-11 15:43:45
+ * 
+ * Last Modified: Sun, 2018-07-08 12:26:29
+ * Last Modified By: 王下邀月熊 <384924552@qq.com>
+ * 
+ * This code is licensed under the MIT License.
+ */
 
+/** 基于递归的模式匹配 */
 function patternMatchesRecursive(pattern, str) {
   if (!pattern.includes('*')) {
     // No wildcards, so must be an exact match
@@ -34,6 +46,7 @@ function patternMatchesRecursive(pattern, str) {
   return false;
 }
 
+/** 基于动态规划的模式匹配 */
 function patternMatchesDynamic(pattern, str) {
   if (!pattern.includes('*')) {
     // No wildcards, so must be an exact match
