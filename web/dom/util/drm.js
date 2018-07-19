@@ -12,32 +12,32 @@
  * This code is licensed under the MIT License.
  */
 
-const drm = function(s) {
+const drm = function (s) {
   this.value = Array.prototype.slice.call(document.querySelectorAll(s));
   return this;
 };
 
 drm.prototype = {
-  each: function(fn) {
+  each: function (fn) {
     [].forEach.call(this.value, fn);
     return this;
   },
-  css: function(v) {
-    return this.each(function(i) {
+  css: function (v) {
+    return this.each(function (i) {
       i.style.cssText = i.style.cssText + v;
     });
   },
-  att: function(a, v) {
-    return this.each(function(i) {
+  att: function (a, v) {
+    return this.each(function (i) {
       i.setAttribute(a, v);
     });
   },
-  getAtt: function(v) {
-    return this.each(function(i) {
+  getAtt: function (v) {
+    return this.each(function (i) {
       i.getAttribute(v);
     });
   },
-  animate: function(
+  animate: function (
     time,
     scale,
     rotate,
@@ -49,7 +49,7 @@ drm.prototype = {
     skewY,
     opacity
   ) {
-    return this.each(function(i) {
+    return this.each(function (i) {
       i.style.cssText =
         i.style.cssText +
         'transition: all ' +
@@ -75,13 +75,13 @@ drm.prototype = {
         ';)';
     });
   },
-  on: function(type, fn) {
-    return this.each(function(i) {
+  on: function (type, fn) {
+    return this.each(function (i) {
       i.addEventListener(type, fn, false);
     });
   },
-  addClass: function(v) {
-    return this.each(function(i) {
+  addClass: function (v) {
+    return this.each(function (i) {
       if (i.classList) {
         i.classList.add(v);
       } else {
@@ -89,58 +89,58 @@ drm.prototype = {
       }
     });
   },
-  toggleClass: function(v) {
-    return this.each(function(i) {
+  toggleClass: function (v) {
+    return this.each(function (i) {
       i.classList.toggle(v);
     });
   },
-  removeClass: function(v) {
-    return this.each(function(i) {
+  removeClass: function (v) {
+    return this.each(function (i) {
       i.classList.remove(v);
     });
   },
-  html: function(v) {
-    return this.each(function(i) {
+  html: function (v) {
+    return this.each(function (i) {
       i.innerHTML = v;
     });
   },
-  text: function(v) {
-    return this.each(function(i) {
+  text: function (v) {
+    return this.each(function (i) {
       i.innerText = v;
     });
   },
-  insertBefore: function(v) {
-    return this.each(function(i) {
+  insertBefore: function (v) {
+    return this.each(function (i) {
       i.insertAdjacentHTML('beforeBegin', v);
     });
   },
-  insertAfter: function(v) {
-    return this.each(function(i) {
+  insertAfter: function (v) {
+    return this.each(function (i) {
       i.insertAdjacentHTML('afterEnd', v);
     });
   },
-  insertFirst: function(v) {
-    return this.each(function(i) {
+  insertFirst: function (v) {
+    return this.each(function (i) {
       i.insertAdjacentHTML('afterBegin', v);
     });
   },
-  insertLast: function(v) {
-    return this.each(function(i) {
+  insertLast: function (v) {
+    return this.each(function (i) {
       i.insertAdjacentHTML('beforeEnd', v);
     });
   },
-  empty: function() {
-    return this.each(function(i) {
+  empty: function () {
+    return this.each(function (i) {
       i.innerHTML = '';
     });
   },
-  offset: function() {
-    return this.each(function(i) {
+  offset: function () {
+    return this.each(function (i) {
       offset = i.getBoundingClientRect();
     });
   }
 };
 
-var $ = function(selector) {
+var $ = function (selector) {
   return new drm(selector);
 };
