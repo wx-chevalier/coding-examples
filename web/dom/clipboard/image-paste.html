@@ -14,21 +14,21 @@
 <script>
     document.addEventListener('paste', function (e) {
         console.info(e);
-        var cbd = e.clipboardData;
-        var fr = new FileReader();
-        var html = '';
-        for (var i = 0; i < cbd.items.length; i++) {
-            var item = cbd.items[i];
+        const cbd = e.clipboardData;
+        const fr = new FileReader();
+        const html = '';
+        for (let i = 0; i < cbd.items.length; i++) {
+            const item = cbd.items[i];
             console.info(item);
             if (item.kind == "file") {
-                var blob = item.getAsFile();
+                const blob = item.getAsFile();
                 if (blob.size === 0) {
                     return;
                 }
                 console.info(blob);
                 fr.readAsDataURL(blob);
                 fr.onload = function (e) {
-                    var result = document.getElementById("result");
+                    const result = document.getElementById("result");
                     //显示文件
                     result.innerHTML = '<img src="' + this.result + '" alt="" />';
                 }
