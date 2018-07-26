@@ -1,8 +1,8 @@
 /* eslint-disable no-extend-native */
 
 /**
- * Description: 增强版本的 all，支持数组与对象方式。如果传入的是数组形式的 promises，则返回结果数组；否则返回对象。
- * @param {Array|Object}promises
+ * Description: 增强版本的 Promise.all，支持数组与对象方式。如果传入的是数组形式的 promises，则返回结果数组；如果传入 {a: Promise} 则返回对象。
+ * @param {Array|Object} promises
  * @return {Promise<any>} 新的 Promise 对象
  */
 Promise.xAll = promises => {
