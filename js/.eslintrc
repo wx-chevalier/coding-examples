@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "plugin:jest/recommended"],
+  "extends": ["airbnb", "plugin:jest/recommended", "prettier"],
   "rules": {
     "global-require": 0,
     "func-names": 0,
