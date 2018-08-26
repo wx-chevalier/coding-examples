@@ -6,49 +6,55 @@ Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Se
 
 # TOC | 目录
 
-- [Java](./java)
+## Language | 编程语言
 
-  - [algods](./java/algods): 数据结构与算法
-  - [design-pattern](./java/design-pattern): 设计模式
-  - [snippets](./java/snippets): 常用代码片
+- [Java](./language/java)
 
-- [JavaScript](./js)
+  - [algods](./language/java/algods): 数据结构与算法
+  - [design-pattern](./language/java/design-pattern): 设计模式
+  - [snippets](./language/java/snippets): 常用代码片
 
-  - [algods](./js/algods): 数据结构与算法
-  - [design-pattern](./js/design-pattern): 设计模式
-  - [snippets](./js/snippets): 常用代码片
+- [JavaScript](./language/js)
 
-- [Python](./python)
+  - [algods](./language/js/algods): 数据结构与算法
+  - [design-pattern](./language/js/design-pattern): 设计模式
+  - [snippets](./language/js/snippets): 常用代码片
 
-  - [algods](./python/algods): 数据结构与算法
-  - [design-pattern](./python/design-pattern): 设计模式
-  - [snippets](./python/snippets): 常用代码片
+- [Python](./language/python)
 
-- [Rust](./rust)
+  - [algods](./language/python/algods): 数据结构与算法
+  - [design-pattern](./language/python/design-pattern): 设计模式
+  - [snippets](./language/python/snippets): 常用代码片
 
-  - [algods](./rust/algods): 数据结构与算法
-  - [design-pattern](./rust/design-pattern): 设计模式
-  - [snippets](./rust/snippets): 常用代码片
+- [Rust](./language/rust)
 
-- [TypeScript](./ts)
+  - [algods](./language/rust/algods): 数据结构与算法
+  - [design-pattern](./language/rust/design-pattern): 设计模式
+  - [snippets](./language/rust/snippets): 常用代码片
 
-  - [algods](./ts/algods): 数据结构与算法
-  - [design-pattern](./ts/design-pattern): 设计模式
-  - [snippets](./ts/snippets): 常用代码片
-  - [types](./ts/types): 部分库的 TypeScript 类型封装
-    - [dockerode-ts-promise](./ts/types/dockerode-ts-promise)
+- [TypeScript](./language/ts)
 
-- [Go](./go)
+  - [algods](./language/ts/algods): 数据结构与算法
+  - [design-pattern](./language/ts/design-pattern): 设计模式
+  - [snippets](./language/ts/snippets): 常用代码片
+  - [types](./language/ts/types): 部分库的 TypeScript 类型封装
+    - [dockerode-ts-promise](./language/ts/types/dockerode-ts-promise)
 
-  - [algods](./go/algods): 数据结构与算法
-  - [design-pattern](./go/design-pattern): 设计模式
-  - [snippets](./go/snippets): 常用代码片
+- [Go](./language/go)
 
-- [Web](./web)
+  - [algods](./language/go/algods): 数据结构与算法
+  - [design-pattern](./language/go/design-pattern): 设计模式
+  - [snippets](./language/go/snippets): 常用代码片
 
-  - [DOM](./web/dom): 常见的 DOM 操作
-  - [WebAssembly](./web/wasm): WebAssembly 相关实验
-  - [V8](./web/v8): V8 代码片解析
-  - [Worker](./web/worker): Web Worker / Service Worker 示例
+## Web
+
+- [DOM](./web/dom): 常见的 DOM 操作
+- [WebAssembly](./web/wasm): WebAssembly 相关实验
+- [V8](./web/v8): V8 代码片解析
+- [Worker](./web/worker): Web Worker / Service Worker 示例
+
+## LeetCode | 算法实践
 
 - [LeetCode](./leetcode): 常见的 LeetCode OJ 算法题
+
+## Infra | 基础架构
