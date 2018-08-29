@@ -16,29 +16,29 @@
 
     const jsonText = JSON.stringify(obj) // Error
   
-以上代码会抛出“Converting circular structure to JSON”异常，说明对象内部存在环状结构。
-
-在JS栏中实现一个“环判断”函数checkCircle(obj)，判断输入对象是否有环。
+以上代码会抛出“Converting circular structure to JSON”异常，说明对象内部存在环状结构。在JS栏中实现一个“环判断”函数checkCircle(obj)，判断输入对象是否有环。
 */
 
-const _toString = Object.prototype.toString
+const _toString = Object.prototype.toString;
 
 const checkCircle = (obj, cache = []) => {
   const values = Array.isArray(obj) ? obj : Object.values(obj);
 
   let result = false;
 
-  values.forEach((value) => {
-  	if (!Array.isArray(value) || _toString.call(value) !== '[object Object]') {
-      return
+  values.forEach(value => {
+    if (!Array.isArray(value) || _toString.call(value) !== '[object Object]') {
+      return;
     }
-    
+
     if (cache.includes(value)) {
-    	result = true;
+      result = true;
     } else {
-    	if (checkCircle(value, cache)) {
-        	result = true;
-        }
+      if (checkCircle(value, cache)) {
+        result = true;
+      }
     }
   });
-  
+
+  return result;
+};

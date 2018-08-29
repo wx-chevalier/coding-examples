@@ -27,6 +27,7 @@ Positional Arguments:
 Flags:
 `
 
+// MenuConf 配置
 type MenuConf struct {
 	Goodbye bool
 }
