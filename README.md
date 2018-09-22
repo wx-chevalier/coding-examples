@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/5803001/45917824-f2641680-beaf-11e8-8076-b0f139d88270.png)
+
 # coding-snippets
 
 Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Several Programming Language: Java, JavaScript, Go, Python, Rust, etc.
