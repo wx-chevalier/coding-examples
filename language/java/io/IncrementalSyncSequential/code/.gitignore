@@ -1,0 +1,14 @@
+.classpath
+.project
+.settings/
+target/
+tester.log
+.idea/
+*.iml
+logs/
+*.log
+
+user_result/
+middle/
+test_logs/
+*.local
