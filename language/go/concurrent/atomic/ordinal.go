@@ -10,6 +10,9 @@ type Ordinal struct {
 	once    *sync.Once
 }
 
+/*
+NewOrdinal is a
+*/
 func NewOrdinal() *Ordinal {
 	return &Ordinal{once: &sync.Once{}}
 }
