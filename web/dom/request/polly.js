@@ -1,5 +1,5 @@
 
-  server.host('https://pre-api-xspace.taobao.com', () => {
+  server.host('https://example.com', () => {
     server
       .post('/h5/:method/1.0')
       .on('request', (req) => {})
