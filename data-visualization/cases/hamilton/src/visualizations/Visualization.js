@@ -43,7 +43,7 @@ var Visualization = React.createClass({
 
     simulation
       .on('tick', this.forceTick)
-      // .on('end', this.forceEnd)
+      .on('end', this.forceEnd)
       .stop();
   },
 
@@ -110,12 +110,12 @@ var Visualization = React.createClass({
       //   interpolate,
       //   this.props
       // );
-      Lines.drawPaths(
-        this.ctx,
-        this.props.linePositions,
-        interpolate,
-        this.props
-      );
+      // Lines.drawPaths(
+      //   this.ctx,
+      //   this.props.linePositions,
+      //   interpolate,
+      //   this.props
+      // );
       // Songs.highlightSong(
       //   this.ctx,
       //   this.props.songPositions,
