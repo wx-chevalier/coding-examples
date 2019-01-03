@@ -1,0 +1,45 @@
+{
+  "name": "vscode-react-typescript",
+  "version": "1.0.17",
+  "description": "Code snippets for react in typescript",
+  "displayName": "Typescript React code snippets",
+  "publisher": "infeng",
+  "icon": "images/react.png",
+  "galleryBanner": {
+    "theme": "light"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infeng/vscode-react-typescript.git"
+  },
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "react",
+    "vscode",
+    "typescript",
+    "vscode-extension"
+  ],
+  "author": "infeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infeng/vscode-react-typescript/issues"
+  },
+  "homepage": "https://github.com/infeng/vscode-react-typescript#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}

@@ -62,3 +62,7 @@ Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Se
 - [LeetCode](./leetcode): 常见的 LeetCode OJ 算法题
 
 ## Infra | 基础架构
+
+## Extensions | 工具扩展
+
+- [vscode-coding-snippets](./extensions/vscode-coding-snippets): 常见代码片的 VSCode 扩展插件

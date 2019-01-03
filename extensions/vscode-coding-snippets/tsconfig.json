@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  }
+}
