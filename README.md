@@ -8,8 +8,11 @@ Code Snippets, DataStructure, Algorithm and DesignPattern Implementations for Se
 
 为了更好地编排，项目中数据结构与算法相关的内容迁移到了 [algorithm-snippets](https://github.com/wxyyxc1992/algorithm-snippets), 设计模式相关内容迁移到了 [design-pattern-snippets](https://github.com/wxyyxc1992/design-pattern-snippets)
 
+# About
 
-# Home & More | 延伸阅读
+![](https://cdn.dribbble.com/users/1131096/screenshots/3831443/book.png)
+
+## Home & More | 延伸阅读
 
 ![](https://i.postimg.cc/59QVkFPq/image.png)
 
