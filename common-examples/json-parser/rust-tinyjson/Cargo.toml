@@ -1,0 +1,30 @@
+[package]
+name = "tinyjson"
+version = "2.5.1"
+edition = "2018"
+authors = ["rhysd <lin90162@yahoo.co.jp>"]
+description = "Tiny simple JSON parser/generator"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/rhysd/tinyjson"
+repository = "https://github.com/rhysd/tinyjson"
+keywords = ["json", "parser", "generator"]
+categories = ["encoding", "parsing"]
+
+include = [
+  "Cargo.toml",
+  "README.md",
+  "LICENSE.txt",
+  "src/*.rs",
+]
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
+[dependencies]
+
+[dev-dependencies]
+walkdir = "2"
+
+[workspace]
+members = ["bench"]

@@ -1,0 +1,83 @@
+run:
+  go: '1.21'
+
+linters:
+  enable-all: true
+  disable:
+    - asasalint
+    - bodyclose
+    - containedctx
+    - contextcheck
+    - cyclop
+    - deadcode # replaced with unused
+    - depguard # too annoying
+    - dupl
+    - dupword
+    - errcheck
+    - errchkjson
+    - errname
+    - errorlint
+    - exhaustivestruct # Replaced by exhaustruct.
+    - exhaustruct
+    - exhaustive # too annoying, too hard to disable with comments
+    - forbidigo
+    - funlen
+    - gci
+    - gochecknoglobals
+    - gocognit
+    - goconst
+    - gocritic
+    - gocyclo
+    - godot
+    - godox
+    - goerr113
+    - gofumpt
+    - golint # Replaced by revive.
+    - gomnd
+    - ifshort
+    - inamedparam # too opinionated
+    - interfacer # deprecated
+    - ireturn
+    - lll
+    - maintidx
+    - maligned # Replaced by govet
+    - musttag # flaky, fires on structs which aren't JSON marshalled
+    - nilnil
+    - nlreturn
+    - noctx
+    - nonamedreturns
+    - nosnakecase
+    - paralleltest
+    - prealloc
+    - scopelint # Replaced by exportloopref.
+    - structcheck # replaced with unused
+    - tagliatelle
+    - tagalign # too fussy
+    - testpackage # too annoying
+    - thelper
+    - usestdlibvars
+    - varcheck # Replaced by unused.
+    - varnamelen
+    - whitespace
+    - wrapcheck
+    - wsl
+
+linters-settings:
+  gofumpt:
+    module-path: github.com/pkg/json
+  revive:
+    rules:
+    - name: var-naming
+      disabled: true
+  stylecheck:
+    checks: [
+      "all",
+      "-ST1003",
+      "-ST1012"
+    ]
+  unparam:
+    check-exported: false
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
